@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e649ae60-40e2-483e-9e96-85c08d9e0520" name="Changes" comment="" />
+    <list default="true" id="e649ae60-40e2-483e-9e96-85c08d9e0520" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java/com/atguigu/cloud/controller/OrderCircuitController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/atguigu/cloud/controller/PayCircuitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/apis/PayFeignApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/apis/PayFeignApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-order80/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java/com/atguigu/cloud/config/FeignConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java/com/atguigu/cloud/config/FeignConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-order80/target/classes/com/atguigu/cloud/config/FeignConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/target/classes/com/atguigu/cloud/config/FeignConfig.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +44,9 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2yPbZ0abJJ6ZGZwys5qptyOBTO4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -62,7 +73,7 @@
     "Spring Boot.Main8001.executor": "Run",
     "Spring Boot.Main8002.executor": "Run",
     "Spring Boot.MainOpenFeign80.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Project/spring-cloud/cloud2024/cloud-consumer-feign-order80/src/main/java/com/atguigu/cloud",
@@ -79,6 +90,9 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Project\spring-cloud\cloud2024\cloud-consumer-feign-order80\src\main\java\com\atguigu\cloud" />
@@ -162,8 +176,8 @@
       <list>
         <item itemvalue="Spring Boot.MainOpenFeign80" />
         <item itemvalue="Spring Boot.Main8001" />
-        <item itemvalue="Spring Boot.Main8002" />
         <item itemvalue="Spring Boot.Main80" />
+        <item itemvalue="Spring Boot.Main8002" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +210,7 @@
       <workItem from="1749958030610" duration="1046000" />
       <workItem from="1749980906723" duration="3181000" />
       <workItem from="1749984309025" duration="6203000" />
+      <workItem from="1750082873336" duration="5393000" />
     </task>
     <servers />
   </component>
