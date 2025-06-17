@@ -34,8 +34,15 @@ spring:
           enabled: true
       circuitbreaker:
         enabled: true
-        group:
-          enabled: true
+#        group:
+#          enabled: true
+logging:
+  level:
+    com:
+      atguigu:
+        cloud:
+          apis:
+            PayFeignApi: debug
 # 基于次数的降级
 #resilience4j:
 #  circuitbreaker: # 降级熔断
@@ -54,32 +61,63 @@ spring:
 #      cloud-payment-service:
 #        base-config: default
 # 基于时间的降级
+#resilience4j:
+#  timelimiter:
+#    configs:
+#      default:
+#        timeout-duration: 10s # 默认1s 超过1s直接降级 (坑)
+#  circuitbreaker:
+#    configs:
+#      default:
+#        failure-rate-threshold: 50 # 调用失败达到50%后打开断路器
+#        slow-call-duration-threshold: 2s # 慢调用时间阈值
+#        slow-call-rate-threshold: 30 # 慢调用百分比峰值
+#        sliding-window-type: TIME_BASED # 滑动窗口类型
+#        sliding-window-size: 2 # 滑动窗口大小 count_based6个请求 time_base6秒
+#        minimum-number-of-calls: 2 # 每个滑动窗口的周期
+#        permitted-number-of-calls-in-half-open-state: 2 #半开状态允许通过的最大请求数
+#        wait-duration-in-open-state: 5s # 从开启到半开启需要5s
+#        automatic-transition-from-open-to-half-open-enabled: true # 开始过度到半开状态
+#        record-exceptions:
+#          - java.lang.Exception
+# resilience4j bulkhead 例子
+#resilience4j:
+#  bulkhead: # 信号量舱壁
+#    configs:
+#      default:
+#        max-concurrent-calls: 2 #隔离允许并发线程执行的最大数量
+#        max-wait-duration: 1s #当达到并打调用数量时，新的线程的阻塞时间只设置为1s，过时将启动兜底fallback
+#    instances:
+#      cloud-payment-service:
+#        base-config: default
+#  timelimiter:
+#    configs:
+#      default:
+#        timeout-duration: 20s
+# resilience4j bulkhead -THEADPOOL 例子
+#resilience4j:
+#  timelimiter:
+#    configs:
+#      default:
+#        timeout-duration: 10s # 默认1s 超过1s直接降级 (坑)
+#  thread-pool-bulkhead: # 线程池
+#    configs:
+#      default:
+#        max-thread-pool-size: 1
+#        core-thread-pool-size: 1
+#        queue-capacity: 1
+#    instances:
+#      cloud-payment-service:
+#        base-config: default
+# spring.cloud.openfeign.circuitbreaker.group.enabled 请设置为false 新启线程和原来主线程脱离
+# resilience4j ratelimiter 限流的例子
 resilience4j:
-  timelimiter:
+  ratelimiter:
     configs:
       default:
-        timeout-duration: 10s # 默认1s 超过1s直接降级 (坑)
-  circuitbreaker:
-    configs:
-      default:
-        failure-rate-threshold: 50 # 调用失败达到50%后打开断路器
-        slow-call-duration-threshold: 2s # 慢调用时间阈值
-        slow-call-rate-threshold: 30 # 慢调用百分比峰值
-        sliding-window-type: TIME_BASED # 滑动窗口类型
-        sliding-window-size: 2 # 滑动窗口大小 count_based6个请求 time_base6秒
-        minimum-number-of-calls: 2 # 每个滑动窗口的周期
-        permitted-number-of-calls-in-half-open-state: 2 #半开状态允许通过的最大请求数
-        wait-duration-in-open-state: 5s # 从开启到半开启需要5s
-        automatic-transition-from-open-to-half-open-enabled: true # 开始过度到半开状态
-        record-exceptions:
-          - java.lang.Exception
+        limitForPeriod: 2 #在一次刷新周期内，允许执行的最大请求数量
+        limitRefreshPeriod: 1s #限流器每隔limitRefreshPeriod刷新一次，将允许处理的最大请求数量重置为limitForPeriod
+        timeout-duration: 1 #线程等待权限的默认等待时间
     instances:
       cloud-payment-service:
-        base-config: default
-logging:
-  level:
-    com:
-      atguigu:
-        cloud:
-          apis:
-            PayFeignApi: debug
+        baseConfig: default
