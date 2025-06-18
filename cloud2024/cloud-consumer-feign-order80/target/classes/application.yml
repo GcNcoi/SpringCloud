@@ -115,9 +115,17 @@ resilience4j:
   ratelimiter:
     configs:
       default:
-        limitForPeriod: 2 #在一次刷新周期内，允许执行的最大请求书
+        limitForPeriod: 2 #在一次刷新周期内，允许执行的最大请求数量
         limitRefreshPeriod: 1s #限流器每隔limitRefreshPeriod刷新一次，将允许处理的最大请求数量重置为limitForPeriod
         timeout-duration: 1 #线程等待权限的默认等待时间
     instances:
       cloud-payment-service:
         baseConfig: default
+
+management:
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0 # 采样率,默认值0.1(就是10%的链路会被记录下来)

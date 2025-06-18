@@ -35,4 +35,7 @@ public interface PayFeignApi {
     @GetMapping(value = "/pay/rateLimit/get/{id}")
     String myRateLimit(@PathVariable("id") Integer id);
 
+    @GetMapping("/pay/micrometer/{id}")
+    String myMicrometer(@PathVariable("id") Integer id);
+
 }

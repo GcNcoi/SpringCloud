@@ -18,3 +18,11 @@ mybatis:
   type-aliases-package: com.atguigu.cloud.entities
   configuration:
     map-underscore-to-camel-case: true
+
+management:
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0 # 采样率,默认值0.1(就是10%的链路会被记录下来)
