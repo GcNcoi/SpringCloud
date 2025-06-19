@@ -1,0 +1,24 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway #以微服务注册进consul或nacos服务列表内
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        prefer-ip-address: true
+        service-name: ${spring.application.name}
+    gateway:
+      routes:
+        - id: pay_routh1
+          uri: http://localhost:8001
+          predicates:
+            - Path=/pay/gateway/get/**
+
+        - id: pay-routh2
+          uri: http://localhost:8001
+          predicates:
+            - Path=/pay/gateway/getInfo/**
