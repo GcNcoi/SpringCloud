@@ -14,11 +14,45 @@ spring:
     gateway:
       routes:
         - id: pay_routh1
-          uri: http://localhost:8001
+#          uri: http://localhost:8001
+          uri: lb://cloud-payment-service
           predicates:
             - Path=/pay/gateway/get/**
+            - After=2025-06-21T12:34:00.700507100+08:00[Asia/Shanghai]
+#            - Before=2025-06-21T12:34:00.700507100+08:00[Asia/Shanghai]
+#            - Between=2025-06-21T12:34:00.700507100+08:00[Asia/Shanghai], 2025-06-22T11:35:00.700507100+08:00[Asia/Shanghai]
+#            - Cookie=username,gxf
+#            - Header=X-Request-Id, \d+
+#            - Host=**.gxf.com
+#            - Query=username, \d+
+#            - RemoteAddr=192.168.10.1/24
+#            - Method=Get,Post
+#            - My=diamond
+#            - name: My
+#              args:
+#                userLevel: diamond
 
         - id: pay-routh2
-          uri: http://localhost:8001
+#          uri: http://localhost:8001
+          uri: lb://cloud-payment-service
           predicates:
             - Path=/pay/gateway/getInfo/**
+
+        - id: pay-routh3
+          uri: lb://cloud-payment-service
+          predicates:
+            - Path=/pay/gateway/filter/**
+#            - Path=/gateway/filter/**
+#            - Path=/XYZ/abc/{segment}
+          filters:
+            - RedirectTo=302, http://www.baidu.com/
+#            - SetPath=/pay/gateway/{segment}
+#            - PrefixPath=/pay
+#            - AddRequestHeader=X-Request-Ggg,Ggg
+#            - RemoveRequestHeader=x-request-ggg
+#            - SetRequestHeader=x-request-ggg,Gxf
+#            - AddRequestParameter=customerId,9527001
+#            - RemoveRequestParameter=customerName
+#            - AddResponseHeader=X-Response-G, Gxf
+#            - SetResponseHeader=Date,2099-11-11
+#            - RemoveResponseHeader=Content-Type

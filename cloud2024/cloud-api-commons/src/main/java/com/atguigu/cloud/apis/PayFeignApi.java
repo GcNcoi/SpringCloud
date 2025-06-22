@@ -5,7 +5,9 @@ import com.atguigu.cloud.resp.ResultData;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient(value = "cloud-payment-service")
+//@FeignClient(value = "cloud-payment-service")
+// 通过gateway访问，需要打开gateway微服务
+@FeignClient(value = "cloud-gateway")
 public interface PayFeignApi {
 
     @PostMapping(value = "/pay/add")
@@ -38,4 +40,9 @@ public interface PayFeignApi {
     @GetMapping("/pay/micrometer/{id}")
     String myMicrometer(@PathVariable("id") Integer id);
 
+    @GetMapping("/pay/gateway/get/{id}")
+    ResultData<PayDTO> getGateWayById(@PathVariable("id") Integer id);
+
+    @GetMapping("/pay/gateway/getInfo")
+    ResultData<String> getGateWayInfo();
 }

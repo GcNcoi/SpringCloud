@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e649ae60-40e2-483e-9e96-85c08d9e0520" name="Changes" comment="提交CircuitBreaker(服务熔断和服务降级)">
-      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/java/com/atguigu/cloud/Main9527.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/atguigu/cloud/controller/PayGateWayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java/com/atguigu/cloud/controller/OrderMicrometerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java/com/atguigu/cloud/controller/OrderMicrometerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-order80/src/main/java/com/atguigu/cloud/controller/OrderGateWayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/java/com/atguigu/cloud/mygateway/MyRoutePredicateFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/apis/PayFeignApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/apis/PayFeignApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/atguigu/cloud/apis/PayFeignApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/target/classes/com/atguigu/cloud/apis/PayFeignApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway9527/src/main/java/com/atguigu/cloud/Main9527.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/java/com/atguigu/cloud/Main9527.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway9527/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway9527/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway9527/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway9527/target/classes/com/atguigu/cloud/Main9527.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway9527/target/classes/com/atguigu/cloud/Main9527.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/atguigu/cloud/controller/PayGateWayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/atguigu/cloud/controller/PayGateWayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/com/atguigu/cloud/controller/PayGateWayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/com/atguigu/cloud/controller/PayGateWayController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +87,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
@@ -228,7 +232,8 @@
       <workItem from="1750082873336" duration="5894000" />
       <workItem from="1750171207967" duration="6454000" />
       <workItem from="1750258901922" duration="3135000" />
-      <workItem from="1750344955140" duration="3480000" />
+      <workItem from="1750344955140" duration="4216000" />
+      <workItem from="1750468792142" duration="14906000" />
     </task>
     <task id="LOCAL-00001" summary="提交CircuitBreaker(服务熔断和服务降级)">
       <option name="closed" value="true" />
