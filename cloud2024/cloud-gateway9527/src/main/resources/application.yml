@@ -29,6 +29,7 @@ spring:
 #            - Method=Get,Post
 #            - My=diamond
 #            - name: My
+
 #              args:
 #                userLevel: diamond
 
@@ -45,6 +46,7 @@ spring:
 #            - Path=/gateway/filter/** # 断言，为配合PrefixPath测试过滤，暂时注释
 #            - Path=/XYZ/abc/{segment} # 断言，为配合SetPath测试，{segment}的内容最后被SetPath取代
           filters:
+            - My=Ggg
 #            - RedirectTo=302, http://www.baidu.com/ # 访问跳转
 #            - SetPath=/pay/gateway/{segment} # {segment}表示占位符
 #            - PrefixPath=/pay # http://localhost:9527/pay/gateway/filter

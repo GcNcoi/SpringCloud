@@ -29,6 +29,7 @@ spring:
 #            - Method=Get,Post
 #            - My=diamond
 #            - name: My
+
 #              args:
 #                userLevel: diamond
 
@@ -39,20 +40,21 @@ spring:
             - Path=/pay/gateway/getInfo/**
 
         - id: pay-routh3
-          uri: lb://cloud-payment-service
+          uri: lb://cloud-payment-service # 匹配后提供服务的路由地址
           predicates:
-            - Path=/pay/gateway/filter/**
-#            - Path=/gateway/filter/**
-#            - Path=/XYZ/abc/{segment}
+            - Path=/pay/gateway/filter/** # 断言，路径相匹配的进行路由，默认正确地址
+#            - Path=/gateway/filter/** # 断言，为配合PrefixPath测试过滤，暂时注释
+#            - Path=/XYZ/abc/{segment} # 断言，为配合SetPath测试，{segment}的内容最后被SetPath取代
           filters:
-            - RedirectTo=302, http://www.baidu.com/
-#            - SetPath=/pay/gateway/{segment}
-#            - PrefixPath=/pay
-#            - AddRequestHeader=X-Request-Ggg,Ggg
-#            - RemoveRequestHeader=x-request-ggg
-#            - SetRequestHeader=x-request-ggg,Gxf
-#            - AddRequestParameter=customerId,9527001
-#            - RemoveRequestParameter=customerName
-#            - AddResponseHeader=X-Response-G, Gxf
-#            - SetResponseHeader=Date,2099-11-11
-#            - RemoveResponseHeader=Content-Type
+            - My=Ggg
+#            - RedirectTo=302, http://www.baidu.com/ # 访问跳转
+#            - SetPath=/pay/gateway/{segment} # {segment}表示占位符
+#            - PrefixPath=/pay # http://localhost:9527/pay/gateway/filter
+#            - AddRequestHeader=X-Request-Ggg,Ggg # 请求头kv，若一头含有多参则重写一行设置
+#            - RemoveRequestHeader=x-request-ggg # 删除请求头x-request-ggg
+#            - SetRequestHeader=x-request-ggg,Gxf # 将请求头x-request-ggg对应的值修改成Gxf
+#            - AddRequestParameter=customerId,9527001 # 新增请求参数Parameter：k，v
+#            - RemoveRequestParameter=customerName # 删除url请求参数customerName，你传递过来全为null
+#            - AddResponseHeader=X-Response-G, Gxf # 新增请求参数X-Response-G并设置值为Gxf
+#            - SetResponseHeader=Date,2099-11-11 # 设置回应头Date值为2099-11-11
+#            - RemoveResponseHeader=Content-Type # 将默认自带Content-Type回应属性删除
