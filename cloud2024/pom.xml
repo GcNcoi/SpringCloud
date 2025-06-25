@@ -23,6 +23,7 @@
         <module>cloud-gateway9527</module>
         <module>cloudalibaba-privider-payment9001</module>
         <module>cloudalibaba-consumer-nacos-order83</module>
+        <module>cloudalibaba-config-nacos-client3377</module>
     </modules>
     <packaging>pom</packaging>
 
