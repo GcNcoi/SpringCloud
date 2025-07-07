@@ -45,4 +45,5 @@ public interface PayFeignApi {
 
     @GetMapping("/pay/gateway/getInfo")
     ResultData<String> getGateWayInfo();
+
 }
