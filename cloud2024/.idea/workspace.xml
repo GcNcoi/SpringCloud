@@ -5,36 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e649ae60-40e2-483e-9e96-85c08d9e0520" name="Changes" comment="提交CircuitBreaker(服务熔断和服务降级)">
-      <change afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/apis/PayFeignSentinelApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/apis/PayFeignSentinelFallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/exception/GlobalExceptionHandle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-gateway9528/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-gateway9528/src/main/java/com/atguigu/cloud/Main9528.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-gateway9528/src/main/java/com/atguigu/cloud/config/GatewayConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-gateway9528/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/atguigu/cloud/Main8401.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/atguigu/cloud/controller/EmpowerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/atguigu/cloud/controller/FlowLimitController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/atguigu/cloud/controller/RateLimitController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/atguigu/cloud/handler/MyRequestOriginParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java/com/atguigu/cloud/service/FlowLimitService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-api-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/apis/PayFeignApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/apis/PayFeignApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/java/com/atguigu/cloud/Main83.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/java/com/atguigu/cloud/Main83.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/java/com/atguigu/cloud/controller/OrderNacosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/java/com/atguigu/cloud/controller/OrderNacosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/target/classes/com/atguigu/cloud/Main83.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/target/classes/com/atguigu/cloud/Main83.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/target/classes/com/atguigu/cloud/controller/OrderNacosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order83/target/classes/com/atguigu/cloud/controller/OrderNacosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-privider-payment9001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-privider-payment9001/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-privider-payment9001/src/main/java/com/atguigu/cloud/controller/PayAlibabaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-privider-payment9001/src/main/java/com/atguigu/cloud/controller/PayAlibabaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-privider-payment9001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-privider-payment9001/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-privider-payment9001/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-privider-payment9001/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudalibaba-privider-payment9001/target/classes/com/atguigu/cloud/controller/PayAlibabaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-privider-payment9001/target/classes/com/atguigu/cloud/controller/PayAlibabaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/apis/AccountFeignApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/apis/StorageFeignApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis_generator2024/src/main/java/com/atguigu/cloud/entities/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis_generator2024/src/main/java/com/atguigu/cloud/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis_generator2024/src/main/java/com/atguigu/cloud/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis_generator2024/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis_generator2024/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis_generator2024/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis_generator2024/src/main/resources/generatorConfig.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -102,6 +79,7 @@
     &quot;Spring Boot.Main9001.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.Main9002 copy from 9001.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.Main9527.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Main9528.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.MainOpenFeign80.executor&quot;: &quot;Run&quot;,
     &quot;StatusDashboardGroupingRule&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -292,7 +270,8 @@
       <workItem from="1751555287683" duration="597000" />
       <workItem from="1751682937397" duration="2308000" />
       <workItem from="1751685267950" duration="7555000" />
-      <workItem from="1751901182830" duration="3472000" />
+      <workItem from="1751901182830" duration="3864000" />
+      <workItem from="1751978606545" duration="3199000" />
     </task>
     <task id="LOCAL-00001" summary="提交CircuitBreaker(服务熔断和服务降级)">
       <option name="closed" value="true" />
